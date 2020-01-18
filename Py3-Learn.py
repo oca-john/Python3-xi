@@ -2,12 +2,14 @@
 # 这是Python3简要学习笔记
 # 按照单个程序写法笔记，完成单个部分后，使用三引号将完成部分注释掉
 
+
 # 引号
 # python里单引号'sth'和双引号"sth"是一样的
 '''
 str1='stringa'
 str2="stringb'
 '''
+
 
 # 3.操作符
 # 幂运算是**，不能用^
@@ -23,6 +25,7 @@ type(num1) -> float
 1.3e6=1300000
 '''
 
+
 # 4.类型转换
 # int(), float(), str(), 转为整型、浮点型、字符串型
 # int()总是下取整
@@ -33,6 +36,7 @@ float(12)=12.0
 str(12)='12'
 type(str(12))=str
 '''
+
 
 # 5.输入
 # raw_input()和input()函数
@@ -45,6 +49,7 @@ int_var=int(input('input your msg'))
 float_var=float(input('input your msg'))
 '''
 
+
 # 6.GUI界面
 # sudo zypper in python3-easygui
 # import easygui
@@ -55,6 +60,7 @@ float_var=float(input('input your msg'))
 # 默认输入（是修饰参数） easygui.enterbox('enter your text here', default='default_text')
 # 对话框获取数字 输入框获得文本，int()或float()转换即可
 # 整数框 easygui.integerbox('enter an integer number')
+
 
 # 7.判断
 # 缩进（全局统一的缩进），==是验证相等的，=是赋值符
@@ -78,6 +84,7 @@ if color=='red' or color=='blue':
 
 if not (age<16): 等同于 if age >= 16:
 '''
+
 
 # 8.循环
 # for循环，需要自定义变量i（可随意指定）
@@ -103,10 +110,12 @@ for i in range(1,6):
     print ...
 '''
 
+
 # 9.注释
 # 单行注释用'#'
 # 多行注释用'''或"""，不同类型的三引号可以嵌套，但只限一次嵌套
 # Shift+Enter 复制抬头并换行
+
 
 # 11.嵌套/可变循环
 # 嵌套循环，循环内嵌套循环，range()函数使用固定的数值范围
@@ -155,6 +164,7 @@ for dog in [0, 1]:
                     print mustard, "\t", onion
                     count = count + 1
 '''
+
 
 # 12.列表、字典
 ## list=[] 创建列表，文本需要引号，数字不用
@@ -209,6 +219,7 @@ third = list.pop(2) # 支持按索引剪切元素
 #   print k, keys[k]        # 打印时，按照键-打印值
 '''
 
+
 # 13.函数
 # 函数定义，"def 函数名(参数名):   折行后写代码块"
 # def func(parameter):
@@ -234,6 +245,7 @@ res_func = func(par1, par2) # 调用时，直接赋值给res_func变量（外部
 # 局部变量local只作用于函数内；全局变量global作用于整个程序；
 # 函数内不能改变全局变量，强制修改会临时创建一个同名的局部变量；
 # 强制全局，函数内创建的一般为局部变量，但可通过global将其作用域提升到全局
+
 
 # 14.对象
 # 基本步骤：定义类(定义类方法，定义类属性)，建立初始化方法，创建类的实例(定义实例方法，定义实例属性)
@@ -269,6 +281,7 @@ class Human:
 # 继承性，类下面，所有实例都继承了所属类的属性和方法（共性）
 # 代码桩，用于代替'未完成的代码块'的关键字，本质是一种占位符，Python用pass作为占位符
 
+
 # 15.模块
 # 函数是少量重用代码块；模块是大量类似重用代码块的集合；
 # 模块创建，和定义函数一样，一个模块文件中可以包含一个或多个函数
@@ -279,15 +292,66 @@ class Human:
 # random.randint(0,10) 用于生成随机整数
 # random.random() 生成0到1之间的随机数， random.random()*10 会生成0到10之间的数(范围*10)
 
+
 # 18.事件
 # 不断寻找事件的特殊循环，称为事件循环；内存中存储事件的部分，称为事件队列；
 # 键盘事件
 # 鼠标事件
 # 定时器事件
 
+
 # 21.格式化打印
-# 
+# Python默认在每个print()函数后面自动换行
+# Python3要在同一行打印多个内容，必须都在()内，用逗号隔开，如"print('hi', 'min!', 'welcome!')"
+# 字串拼接直接用加号+，如"a='first', b='second', c=a+b, c='first second'"
+# 自己增加换行符，直接print()空行，或在print()中加入'\n'换行符
+# 换行符 \n，制表符 \t
+# 字符串中插入变量，用百分号%实现格式字符串
+'''
+name = 'zhang san'
+print('my name is %s' % name)       # %s 指str字符串， %i 指int整型， %f 指float浮点型
+'''
+
+# format()格式化，不用再区分不同类型的%符号(%s, %i, %f)
+'''
+print('{people} will {action}'.format(people='I',action='come'))
+
+words={'people':'He','action':'go'}
+print('{people} will {action}'.format(**words)) # 字典前加**，可在format()中调用
+'''
+# 分割字符串，name_list = name_string.split(',')  # 以逗号为分隔符，拆分单词
+# 连接字符串，long_string = ' '.join(word_list)   # 用空格连接单词列表，形成句子
+# 搜索字符串，特定开头，startswith()，特定结尾，endswith()，常用在比较或if语句中
+'''
+name='Zhangsan'
+name.startswith('Z')        # 是否以Z开头，True
+name.startswith('Zhe')      # 是否以Zhe开头，False
+name.endswith('n')          # 是否以n结尾，True
+name.endswith('saan')       # 是否以saan结尾，False
+'''
+# 字串中搜索，in关键字搜索是否存在，index()搜索索引位置
+'''
+a='long short multi line string'
+if 'multi' in a:                    # in判断字符串是否存在于变量a中
+    position = a.index('multi')     # a.index()搜索字符串在变量a中的索引位置
+    print ("found 'multi' at index", position)
+'''
+# 删除行尾字符或空白符，strip()
+'''
+a='hello smith orderated'
+a.strip('ed')   # 指定字符串'ed'，删除末尾存在的字符'ed'，若不存在则不修改
+a.strip()       # 没有指定参数，删除末尾的空白符(空格\s、制表符\t、换行符\n)
+'''
+# 改变大小写，全小写lower()，首字母大写capitalize()，全大写upper()
+'''
+a='HELlo'
+a.lower()       # hello
+a.capitalize()  # Hello
+a.upper()       # HELLO
+'''
+
 
 # 22.文件读写
+
 
 # 23.随机数
