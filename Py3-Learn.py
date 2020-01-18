@@ -416,3 +416,12 @@ pickle_file.close()
 
 # 23.随机数
 # 产生随机数需要import random模块
+# 生成随机整数
+'''
+s = random.randint(1,6)     # 在1-6中随机生成整数
+
+sides = [1,2,3,4,5,6]
+s = random.choice(sides)    # 6个面中随机选一个，生成1-6中的一个随机数
+'''
+# random.randint()中的范围是双包含的，randint(1,6)是指1-6的数
+# 循环部分，range()是半包含的，不含后面的数，range(1,6)是指1-5的数
