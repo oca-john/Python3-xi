@@ -316,8 +316,17 @@ print('my name is %s' % name)       # %s 指str字符串， %i 指int整型， %
 '''
 print('{people} will {action}'.format(people='I',action='come'))
 
-words={'people':'He','action':'go'}
+print('{0} will {1}'.format('He', 'go'))        # 通过变量位置(索引0开始)调用
+
+words={'people':'He','action':'go'}             # 借助字典传入参数
 print('{people} will {action}'.format(**words)) # 字典前加**，可在format()中调用
+
+print('{:^20}'.format('something'))             # 以20为制表位宽度，:^居中排列，:<居左, :>居右
+
+print('{:.1f}'.format(3.1415926))               # 作为float浮点型数据，'.1'保留一位小数
+print('{:.4f}'.format(3.1))                     # 作为float浮点型数据，'.4'保留一位小数，不足用0补齐
+print('{:,}'.format(983290189382.234))          # 逗号千位分隔符
+print('{:,.4f}'.format(983290189382.234))       # 逗号分隔符在前，精度控制在后，逗号分割、4位浮点数
 '''
 # 分割字符串，name_list = name_string.split(',')  # 以逗号为分隔符，拆分单词
 # 连接字符串，long_string = ' '.join(word_list)   # 用空格连接单词列表，形成句子
