@@ -379,6 +379,40 @@ a.upper()       # HELLO
 
 
 # 22.文件读写
+# 基本流程：打开文件、读文件、处理、关闭文件
+# 打开文件，关闭文件
+# 读文件
+# 逐行读取
+# 写文件，追加模式
+'''
+my_file = open('notes.txt', 'r')    # 打开文件，读方式打开read        r方式打开后，才能进行操作
+lines = my_file.readlines()         # 逐行读取全部内容
+fisrt_line = my_file.readline()     # 读入一行
+my_file.close()                     # 关闭文件
+
+my_file.seek(0)                     # 单行读取几行后，可回到起始位置
+
+my_file = open('notes.txt', 'w')    # 打开文件，写方式打开write       w方式打开后，支持写入操作
+my_file = open('notes.txt', 'a')    # 打开文件，追加方式打开append
+my_file.write('new info to write')  # 写入内容
+my_file.close()                     # 关闭文件
+
+my_file = open("file.txt", 'w')
+print >> my_file, "Hello there, neighbor!"      # print()重定向写入文件，后面跟内容
+my_file.close()                     # 关闭文件
+'''
+# 用pickle模块读写，需要'import pickle'
+'''
+import pickle                       # 导入模块
+pickle_file = open('my_pickled_list.pkl', 'w')  # 写方式打开
+pickle.dump(my_list, pickle_file)   # .dump方式将my_list写入pickle_file
+pickle_file.close()
+
+pickle_file = open('my_pickled_list.pkl', 'r')  # 读方式打开
+recovered_list = pickle.load(pickle_file)       # 还原之前的内容
+pickle_file.close()
+'''
 
 
 # 23.随机数
+# 产生随机数需要import random模块
