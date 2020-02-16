@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # Python3-Learn-ZHXI.py
+# 源自：父与子的编程之旅，自行测试为Python3代码
 # 这是Python3简要学习笔记
 # 按照单个程序写法笔记，完成单个部分后，使用三引号将完成部分注释掉
 
