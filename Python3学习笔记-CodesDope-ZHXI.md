@@ -18,16 +18,15 @@ print("hello world!")		# py3 need the (), for print is a function
    2. cd to the directory which include the script file.
    3. Type `python file_l.py`, to run.
 
-```
-0.工作方式，写脚本，运行
-1.简单的打印方式
-2.语法元素（数字、字符串、变量、运算符、转义符）
-3.语法结构（顺序执行、循环结构（for、while）、选择结构（if）、跳过与终止）
-4.文件读写
-5.正则表达式
-6.定义函数、调用函数
-7.组织模块、调用模块
-8.类、对象、继承性
+```markdown
+0. 工作方式，写脚本，运行
+1. 简单的打印方式,语法元素（数字、字符串、变量、运算符、转义符）
+2. 语法结构（顺序执行、循环结构（for、while）、选择结构（if）、跳过与终止）
+3. 文件读写
+4. 正则表达式
+5. 定义函数、调用函数
+6. 组织模块、调用模块
+7. 类、对象、继承性
 ```
 
 ## 1. Elements
@@ -84,4 +83,24 @@ elif a == 10:
 else:
     print ("your num is less than 10\n")
 ```
+
+## 3. File and Directory I/O
+
+
+
+## 4. Regular expressions
+
+
+
+## 5. Function
+
+
+
+## 6. Modules
+
+
+
+## 7. Classes, Objects, Inheritance
+
+
 
