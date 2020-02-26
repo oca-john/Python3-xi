@@ -72,7 +72,61 @@ and, or, not						# logical AND, OR, NOT
 eq, ne, gt, lt, ge, le				# compare two values
 ```
 
+### 1.4 String
+
+```python
+a = 'hello'
+print(a[0])							# get 'h'
+print(len(a))						# get 5
+print(a[1:4])						# get 'ell', not include 'o'[4]
+____________________________________
+import string
+b = 'hello world'
+print(a.split())					# get ('hello','world'), split by space
+print(a.split('o'))					# get ('hell',' w','rld'), split by 'o'
+print('-'.join(b))					# join the words, by '-'
+____________________________________
+print(a.capitalize(b))				# capitalize the string
+print(a.lower(b))					# lowercase the string
+print(a.upper(b))					# uppercase the string
+print(a.swapcase(b))				# lower -> upper, upper -> lower
+```
+
+### 1.5 List, Tuples
+
+```python
+a = [1,2,3,4]						# define list by []
+print(type(a))						# type() get the class of 'list'
+print(a[0])							# pick the ele by index[0]
+a[1] = 5							# [1,5,3,4], change the ele
+b = [1,2,"anything",4.0]			# list can include diff kinds of ele
+____________________________________
+print(list(range(0)))				# [], 0 ele from 0 -> none ele
+print(list(range(10)))				# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 10 ele from 0
+print(list(range(1,11)))			# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(list(range(1,10,2)))			# [1, 3, 5, 7, 9], 2 is step
+____________________________________
+c = list(range(1,5))				# define a list by list() and range()
+print(len(c))						# get the length by len()
+____________________________________
+d = c[0:3]							# [1,2,3]
+____________________________________
+
+```
+
+```python
+a = (1,2,3)							# define tuple by (), can't change the ele
+```
+
+
+
+### 1.6 Dict
+
+
+
 ## 2. Structure
+
+### 2.1 if...else...
 
 ```python
 a = int(input())
@@ -84,23 +138,49 @@ else:
     print ("your num is less than 10\n")
 ```
 
+### 2.2 while
+
+
+
+### 2.3 For
+
+
+
 ## 3. File and Directory I/O
+
+```python
+open(file, 'r')
+```
 
 
 
 ## 4. Regular expressions
 
+```python
+
+```
+
 
 
 ## 5. Function
+
+```python
+
+```
 
 
 
 ## 6. Modules
 
+```python
+
+```
+
 
 
 ## 7. Classes, Objects, Inheritance
 
+```python
 
+```
 
