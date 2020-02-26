@@ -25,8 +25,7 @@ print("hello world!")		# py3 need the (), for print is a function
 3. 文件读写
 4. 正则表达式
 5. 定义函数、调用函数
-6. 组织模块、调用模块
-7. 类、对象、继承性
+6. 类，对象
 ```
 
 ## 1. Elements
@@ -110,77 +109,329 @@ c = list(range(1,5))				# define a list by list() and range()
 print(len(c))						# get the length by len()
 ____________________________________
 d = c[0:3]							# [1,2,3]
+print(c[::2])						# [1,3,5], step is 2, from index 0
+print(c[::3])						# [1,4], step is 3
+print(c[::-1])						# [5,4,3,2,1], step is -1
+print(del(c[1]))					# [1,3,4,5], del the index[1]
 ____________________________________
-
+e = [[1,2,3],[4,5,6],[7,8,9]]		# 2D list
+print(e[1][1])						# 5, 1st_index[1], 2nd_index[1]
+____________________________________
+f = [1,2]
+g = [4,5]
+h = f+g								# [1,2,4,5], list one by one
+h.append(9)							# [1,2,4,5,9], append in the end
+i = f*2								# [1,2,1,2], like 'x' in perl
+print(2 in h)						# True, is '2' in list 'h'
+____________________________________
+j = list(map(int,f))				# [1,2], map all the ele in list
+print(f.index(2))					# 1, check the index of ele '2'
 ```
 
 ```python
-a = (1,2,3)							# define tuple by (), can't change the ele
+a = (1,2,"Hello")					# define tuple by ()
+a[1] = 12		#TypeError			# can't change the ele
 ```
 
+| chr  | means      | notice                   |
+| ---- | ---------- | ------------------------ |
+| []   | list       |                          |
+| ()   | tuple      | can't change the element |
+| {}   | dictionary | no order                 |
 
+### 1.6 Dictionary
 
-### 1.6 Dict
-
-
+```python
+a = {'mango':40,'banana':10}		# define dict by {'key':value}
+print(a['mango'])					# 40, access the k-v pair by it's key
+a['cherry'] = 20					# add new k-v pair
+b = {'a':11, 'b':22, 'c':33}		# diff types are supported
+____________________________________
+print(list(b.keys()))				# get all keys of dict
+print(list(b.values()))				# get all values of dict
+print('c' in b.keys())				# is ele 'c' included in dict b
+```
 
 ## 2. Structure
 
 ### 2.1 if...else...
 
 ```python
-a = int(input())
+a = int(input("Enter a number"))
 if a > 10:
 	print ("your num is greater than 10\n")
 elif a == 10:
     print ("your num is eq to 10\n")
 else:
     print ("your num is less than 10\n")
+____________________________________
+print("Enter a number")
+a = int(input())
+if a%2 == 0 and a>10: 				# using 'and' in condition
+	print("Your number is greater than 10 and even")
+elif a%2 == 0 and a<10: 			# using 'and' to check if both are true
+	print("Your number is even and smaller than 10")
+else:
+	print("Your number is odd")
+____________________________________
+print("Enter your age.")
+age = int(input())
+if age < 13:
+	print("Hey! kid")
+elif age>13 and age < 20:
+	pass							# return nothing
+else:
+	print("You are grown up.")
 ```
 
 ### 2.2 while
 
-
+```python
+i = 1								# timer
+while i<=3:
+	print(i*4)						# get (4, 8, 12)
+	i=i+1							# => i++
+____________________________________
+while Ture:
+    blocks
+    if condition:
+        break						# come out of while loop
+____________________________________
+a = 5								# limit in 5 lines
+b = 1								# line num, start from 1
+while a>0:
+	while b<=5:
+		print ("*"*b)				# print "*" b times
+		b = b+1
+		a = a-1
+____________________________________
+#Digital dice
+#importing random function to genterate random number
+from random import randint
+print("Give lower limit of dice")
+a = int(input())					# input 1
+print("Give upper limit of dice")
+b = int(input())					# input 6
+print("type q to Quit or any other key/enter to continue")
+while True:
+	print(">>> "+str(randint(a,b)))	# randint is generating random num in 1-6
+	if input() == 'q':				# if 'q' is entered then come out of loop
+		break
+```
 
 ### 2.3 For
 
-
+```python
+a = [78,98,50,37,45]
+for m in a:							# map all ele in list
+	print(m)
+____________________________________
+sum = 0								# init the sum=0
+for m in a:							# map all ele in list
+	sum = sum+m						# calc the sum value
+print(sum)
+____________________________________
+table_12 = [12,24,36,48,60,72,84,96,108,120]
+table_13 = []
+z = 1								# delta
+for i in table_12:
+	table_13.append(i+z)			# from t_12 produce t_13's ele
+	z = z+1							# produce a new delta
+print(table_13)
+```
 
 ## 3. File and Directory I/O
 
 ```python
-open(file, 'r')
+file = open("new","w")				# opening 'new'(filename) in 'write' mode
+print(file)
+file.write("This is first line.")	# writing on file, "file.write()"
+file.write("This is second line.")
+file.close()						# closing the file
+____________________________________
+file = open("new","r")				# opening 'new'(filename) in 'read' mode
+t = file.read()						# reading file, "file.read()"
+print(t)
+file.close()
+____________________________________
+file = open("new","r")
+t = file.read(2)					# read 2 chr, arg limits num of chr to read
+print(t)							# (Th)
+t = file.read(999)					# read 999 chr
+print(t)							# (is is first line.This is second line.)
+file.close()
 ```
 
-
-
-## 4. Regular expressions
+## 4. Regular expression
 
 ```python
 
 ```
-
-
 
 ## 5. Function
 
 ```python
-
+def is_even(x):						# define a function, by "def func(arg): block"
+	if x%2 == 0:					# condition
+		print("even")				# output
+	else:
+		print("odd")
+is_even(2)							# use function
+is_even(3)
+____________________________________
+def sum():							# define a function sum()
+	a = int(input("Enter first number >>>"))
+	b = int(input("Enter second number >>>"))
+	print(a+b)						# function block
+sum()
+____________________________________
+def checkdiv(x,y):
+	if x>=y:						# first condition
+		if x%y == 0:				# function block
+			print(x,"is divisible by",y)
+		else:
+			print(x,"is not divisible by",y)
+	else:
+		print("Enter first number greater than or equal to second number")
+checkdiv(4,2)
+checkdiv(4,3)
+checkdiv(2,4)
+____________________________________
+def is_even(x):						# define a func 'is_even()'
+	if x%2 == 0:
+		return True					# return result
+	else:
+		return False
+print(is_even(1))					# use the func 'is_even' with arg
+print(is_even(2))
+____________________________________
+def rev(a):							# define a func 'rev()'
+	c = []
+	i = len(a)-1					# list is start from 0.
+	while i>=0:
+		c.append(a[i])				# pick ele start from end of list 'c'
+		i = i-1						# direction is backword
+	return c
+z = rev([2,4,6,3,5,2,6,43])			# use the func 'rev' with args
+print(z)
+____________________________________
+def is_even(x):						# define func
+	if x%2 == 0:
+		return True
+	else:
+		return False
+# div6 function to check divisiblity by 6
+def div6(y):						# define func_2
+	if is_even(y) and y%3 == 0:		# use 'func' in func_2
+		return True
+	else:
+		return False
+____________________________________
+def factorial(x):					# define func 'factorial()'
+	if x==0 or x==1:
+		return 1					# 0!, 1! is 1
+	else:
+		return x*factorial(x-1)		# clac x!
+print(factorial(0))					# 1
+print(factorial(1))					# 1
+print(factorial(4))					# 24
+print(factorial(5))					# 120
 ```
 
+## 6. Class, object
 
-
-## 6. Modules
+### 6.1 define class, use object, define method
 
 ```python
-
+class Square():
+	pass							# none code in block
+x = Square()
+x.side = 14							# arg is told
+print(x.side)
+____________________________________
+class Square():						# define class
+	def perimeter(self,side):		# def a function/method
+		return side*4				# how to clac
+a = Square()						# use object
+print(a.perimeter(14))				# use the func with arg
+____________________________________
+class Student():					# define class
+	def __init__(self,name):		# define init method
+		self.name = name
+a = Student("Sam")					# use object with arg
+print(a.name)
+____________________________________
+class Rectangle():					# define class
+	def __init__(self,l,b):			# define init method
+		self.length = l
+		self.breadth = b
+	def getArea(self):				# define func/method 'getArea()'
+		return self.length*self.breadth
+	def getPerimeter(self):			# define func/method 'getPerimeter'
+		return 2*(self.length+self.breadth)
+a = Rectangle(2,4)					# use object with args
+print(a.getArea())
+print(a.getPerimeter())
 ```
 
-
-
-## 7. Classes, Objects, Inheritance
+### 6.2 subclass
 
 ```python
+class Child():						# define class 'Child'
+	def __init__(self,name):		# define init/name method
+		self.name = name
+class Student(Child):				# define class 'Student', subclass of 'Child()'
+	def __init__(self,name,roll):	# define init/name/roll method of subclass
+		self.roll = roll
+		Child.__init__(self,name)
+a = Child("xyz")					# object of 'Child'
+print(a.name)
+b = Student("abc",12)				# object of 'Student'
+print(b.name)
+print(b.roll)
+____________________________________
+class Rectangle():					# define class 'Rectangle'
+	def __init__(self,leng,br):		# define init/leng/br method
+		self.length = leng
+		self.breadth = br
+	'''while calling a method in a class python
+	automatically passes an instance( object ) of it.
+	so we have to pass sef in area i.e. area(self)'''
+	def area(self):					# define func/method 'area()'
+		'''length and breadth are not globally defined.
+		So, we have to access them as self.length'''
+		return self.length*self.breadth
+class Square(Rectangle):			# define subclass
+	def __init__(self,side):
+		Rectangle.__init__(self,side,side)
+		self.side = side
+s = Square(4)						# get a arg
+print(s.length)
+print(s.breadth)
+print(s.side)
+print(s.area())						# It appears as nothing is passed but python will pass an instance of class.
+```
 
+## 7. Override, exception handle
+
+### 7.1 Overriding
+
+```python
+class Rectangle():
+	def __init__(self,length,breadth):
+		self.length = length
+		self.breadth = breadth
+	def getArea(self):
+		print(self.length*self.breadth," is area of rectangle")
+class Square(Rectangle):
+	def __init__(self,side):
+		self.side = side
+		Rectangle.__init__(self,side,side)
+	def getArea(self):
+		print(self.side*self.side," is area of square")
+s = Square(4)
+r = Rectangle(2,4)
+s.getArea()
+r.getArea()
 ```
 
