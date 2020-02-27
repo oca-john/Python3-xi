@@ -267,8 +267,19 @@ file.close()
 ### 3.2 OS module
 
 ```python
-
+import os
+os.getcwd()							# pwd
+os.listdir(path)					# ls
+os.chdir(path)						# cd
 ```
+
+| function            | means       | function              | means            |
+| ------------------- | ----------- | --------------------- | ---------------- |
+| os.rename(old, new) | mv old new  | os.link(src, dst)     | ln               |
+| os.remove(path)     | rm          | os.symlink(src, dst)  | ln -s            |
+| os.removedirs(path) | rmdir       | os.readlink(path)     | get path of link |
+| os.rmdir(path)      | rm -rf      | os.lchmod(path, mode) | chmod            |
+| os.unlink(path)     | delete path |                       |                  |
 
 ## 4. Regular expression
 
@@ -277,15 +288,46 @@ file.close()
 import re							# import re module
 re.match(pattern, string, flag=0)	# match pattern in string(from start)
 re.search(pattern, string, flag=0)	# search pattern in string(in full string)
+re.sub(pattern, repl, string, count=0, flags=0)	# sub 'pattern' with 'repl', total 'count' times
+____________________________________
+#!/usr/bin/python
+import re
+def double(matched):				# define func 'double()'
+    value = int(matched.group('value'))
+    return str(value * 2)
+
+s = 'A23G4HFD567'
+print(re.sub('(?P<value>\d+)', double, s))	# sub 'match pattern' with 'func double()'
 ```
 
-|      |      |      |      |
-| ---- | ---- | ---- | ---- |
-|      |      |      |      |
-|      |      |      |      |
-|      |      |      |      |
+### 4.1 chr in special
 
+| chr   | means                       | chr    | means                               |
+| ----- | --------------------------- | ------ | ----------------------------------- |
+| \w    | word                        | \d     | digit, num                          |
+| \W    | none word                   | \D     | none digit, num                     |
+| \s    | space                       | \b     | match border, 'er\b' -> 'never'     |
+| \S    | none space                  | \B     | match none border, 'er/B' -> 'verb' |
+| \A, ^ | ahead of string             | \n, \t | next line, tab                      |
+| \Z, $ | end of string(current line) |        |                                     |
+| \z    | end of string(multi line)   | a\|b   | match 'a' or 'b'                    |
 
+### 4.2 classes
+
+| chr     | means          | chr         | means                |
+| ------- | -------------- | ----------- | -------------------- |
+| [aeiou] | one of 'aeiou' | [pP]ython   | 'python' or 'Python' |
+| [0-9]   | num            | [a-zA-Z0-9] | any 'chr' and 'num'  |
+| [a-z]   | chr, lowercase | [^abc]      | none of 'abc'        |
+| [A-Z]   | chr, uppercase | [^0-9]      | none of num          |
+
+### 4.3 times
+
+| chr  | times       | chr     | times             |
+| ---- | ----------- | ------- | ----------------- |
+| re?  | 0, 1 time   | re{n}   | n times           |
+| re+  | 1-any times | re{n,}  | n times, at least |
+| re*  | 0-any times | re{n,m} | n-m times         |
 
 ## 5. Function
 
