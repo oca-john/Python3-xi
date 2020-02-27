@@ -242,6 +242,8 @@ print(table_13)
 
 ## 3. File and Directory I/O
 
+### 3.1 File, directory
+
 ```python
 file = open("new","w")				# opening 'new'(filename) in 'write' mode
 print(file)
@@ -262,11 +264,28 @@ print(t)							# (is is first line.This is second line.)
 file.close()
 ```
 
-## 4. Regular expression
+### 3.2 OS module
 
 ```python
 
 ```
+
+## 4. Regular expression
+
+```python
+#!/usr/bin/python
+import re							# import re module
+re.match(pattern, string, flag=0)	# match pattern in string(from start)
+re.search(pattern, string, flag=0)	# search pattern in string(in full string)
+```
+
+|      |      |      |      |
+| ---- | ---- | ---- | ---- |
+|      |      |      |      |
+|      |      |      |      |
+|      |      |      |      |
+
+
 
 ## 5. Function
 
@@ -417,21 +436,74 @@ print(s.area())						# It appears as nothing is passed but python will pass an i
 ### 7.1 Overriding
 
 ```python
-class Rectangle():
-	def __init__(self,length,breadth):
+class Rectangle():					# define class
+	def __init__(self,length,breadth):	# define init/length/breadth method
 		self.length = length
 		self.breadth = breadth
-	def getArea(self):
+	def getArea(self):				# define method
 		print(self.length*self.breadth," is area of rectangle")
-class Square(Rectangle):
-	def __init__(self,side):
+class Square(Rectangle):			# define subclass
+	def __init__(self,side):		# define init/side method
 		self.side = side
 		Rectangle.__init__(self,side,side)
-	def getArea(self):
+	def getArea(self):				# define init method
 		print(self.side*self.side," is area of square")
-s = Square(4)
-r = Rectangle(2,4)
+s = Square(4)						# use object with arg
+r = Rectangle(2,4)					# use object with arg
 s.getArea()
 r.getArea()
+```
+
+### 7.2 Exception handle
+
+```python
+try:
+    print(5/0)						# if block have error, run 'except block'
+except ZeroDivisionError:			# define the error
+    print("Division by 0 is not permitted.")	# give the info of error
+____________________________________
+try:
+    a = int(input("hello world"))
+    print(a//2)						# a should be a num
+except:
+    print("Some Error Occurred!")	# if you input 'abc' will get this error
+else:
+    print("No Errors!")
+finally:							# no matter what condition, do the block finally
+    print("Either of try or except is executed.")
+____________________________________
+def divide(a, b):
+    try:
+        print(a//b)					# define func/method
+    except TypeError:				# diff kinds of error
+        print('Check the type of arguments.')
+    except ZeroDivisionError:
+        print('Error: Division by 0')
+    except:
+        print('Unknown Error')
+
+print("5/\'2\'")
+divide(5, '2')						# use the func, test error
+print('')							# keep empty, select an error
+
+print("5/0")
+divide(5, 0)
+print('')
+
+print('5/2')						# use the func, normally
+divide(5, 2)
+____________________________________
+try:
+    print(5//0)
+except ZeroDivisionError as ex:		# define keyword/label of error info
+    print(ex)						# use keyword/label
+____________________________________
+raise IndexError('Index is out of the range.')	# raise error_type(error_info)
+'''
+Traceback (most recent call last):	# show the full error info
+  File "b.py", line 2, in <module>
+    raise IndexError('Index is out of the range.')
+IndexError: Index is out of the range.	# if no error_info, just show error_type
+'''
 ```
 
