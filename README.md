@@ -6,9 +6,9 @@ Pytorch非常流行的一个原因，没有完全将张量的操作API化，让�
 
 ## 关于jupyter_notebook
 
-在win上舒服的在本地使用jupyter_notebook还是比较麻烦的，记录一下使用技巧，方便自己日后使用。
+在windows平台，舒服地在本地使用jupyter_notebook还是比较麻烦的，记录一下使用技巧，方便自己日后使用。
 
-> 本段主要是为了在本地以指定目录为父目录，打开jupyter_notebook浏览器（以为该浏览器不支持向上退回至根目录），以管理或阅读目录下的所有ipynb文件。
+> 本段主要是为了在本地以指定目录为工作目录，打开jupyter_notebook浏览器（因为该浏览器不支持向上退回至根目录），以管理或阅读目录下的所有ipynb文件。
 
 1. 下载（或创建）本地jupyter_notebook笔记本
 2. 打开本地Console，cd定位到指定目录
