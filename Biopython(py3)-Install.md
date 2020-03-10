@@ -1,4 +1,4 @@
-# biopython installation
+# BioPython Installation
 
 ## 1. Under openSUSE
 - `sudo zypper in python3-biopython` to install biopython with py3.
