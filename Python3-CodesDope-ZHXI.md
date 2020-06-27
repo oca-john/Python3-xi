@@ -1,4 +1,4 @@
-# Python3学习笔记-CodesDope-ZHXI
+# Python3-CodesDope-ZHXI
 
 - From [https://www.codesdope.com](https://www.codesdope.com/) 
 
