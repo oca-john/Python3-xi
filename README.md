@@ -4,7 +4,8 @@ Python3是目前应用领域最多最流行的脚本语言，有多方面潜力�
 
 Pytorch非常流行的一个原因，没有完全将张量的操作API化，让用户有足够的操作深度和自由度，可以自己掌控开发进度，也可以方便的融入别人的项目。
 
-Python3 related libs: **numpy**, **pandas**, **matplotlib**;  
+Python3 related libs:  
+            basic-libs: **numpy**, **pandas**, **matplotlib**;  
             advanced: **seaborn**, **scipy**;  
             ai-related: **torch**, **torchvision**;  
 
