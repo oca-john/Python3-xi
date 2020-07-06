@@ -25,13 +25,13 @@ Python3 related libs:
 2. 修改`Start in`起始位置属性为`D:\Users\User\Documents`，即为Jupyter默认位置
 3. 打开conda，输入`jupyter-notebook`命令打开notebook浏览器【也可以中间用连字符】
 
-## vscode.code-runner.wsl-opensuse
+## vscode.code-runner.wsl-linux
 - WSl2中用vscode调用默认终端实现高效开发
 
 ### 软件环境
-控制面板中开启wsl功能，微软商店安装openSUSE发行版。  
+控制面板中开启wsl功能，微软商店安装linux发行版。  
 - 安装完创建普通用户并设置密码；  
-- 安装基本的开发工具（Linux端）；  
+- 安装基本的开发工具（linux端）；  
 
 安装vscode软件以及remote-wsl, code-runner插件。  
 
