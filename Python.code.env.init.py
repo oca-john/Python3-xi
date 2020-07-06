@@ -17,3 +17,6 @@ print("3rd part lib were configured well.")
 # 3. 深度学习库
 os.system("sudo pip install torch==1.5.1+cpu torchvision==0.6.1+cpu -i https://pypi.tuna.tsinghua.edu.cn/simple")
 print("deeplearning lib pytorch was installed well.")
+
+# 4. 代码语法格式检查
+os.system("sudo pip install pylint")
