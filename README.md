@@ -49,7 +49,7 @@ F1打开设置搜索框-搜索setting.json （文件-预设-设置-搜索setting
     "code-runner.runInTerminal": true,			# 编辑器代码是否用终端解释
     "code-runner.terminalRoot": "/mnt/",		# 终端解释器的root目录
 ```
-## PySide2
+## pyside2
 ### Python最“自由”的三方库
 Pyhton作为最流行的编程软件之一，具有相当多的三方GUI库，除了自身所带的Tk库之外，Wx库、Gtk库、PyQt库是最著名的。  
 Tk库灵活性和功能性相对于三方库相去甚远，Gtk是Gnome背后的底层库，基于C语言，其Python绑定据说较复杂，主要是C语言三方库的缺少导致一些功能的实现较困难。  
