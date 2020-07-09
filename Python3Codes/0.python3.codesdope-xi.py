@@ -43,14 +43,16 @@ print(math.sin(30))					# do some math with math lib
 
 
 ### 1.3 Operators
+'''
 0, "", undef						# all these three are FALSE
 others								# TRUE
 and, or, not						# logical AND, OR, NOT
 +, -, *, /, %, **					# add, subtract, multiply, divides, modulus, exponent
-=									# assigns
+=							# assigns
 +=, -=, *=, /=, %=, **=				# add & assigns, subtract & assigns,...
 ==, !=, >, <, >=, <=				# compare two values
 eq, ne, gt, lt, ge, le				# compare two values
+'''
 
 ### 1.4 String
 a = 'hello'
@@ -95,7 +97,6 @@ print(2 in h)						# True, is '2' in list 'h'
 j = list(map(int,f))				# [1,2], map all the ele in list
 print(f.index(2))					# 1, check the index of ele '2'
 
-
 a = (1,2,"Hello")					# define tuple by ()
 a[1] = 12		#TypeError			# can't change the ele
 
@@ -109,8 +110,8 @@ a[1] = 12		#TypeError			# can't change the ele
 
 ### 1.6 Dictionary
 a = {'mango':40,'banana':10}		# define dict by {'key':value}
-print(a['mango'])					# 40, access the k-v pair by it's key
-a['cherry'] = 20					# add new k-v pair
+print(a['mango'])				# 40, access the k-v pair by it's key
+a['cherry'] = 20				# add new k-v pair
 b = {'a':11, 'b':22, 'c':33}		# diff types are supported
 
 print(list(b.keys()))				# get all keys of dict
@@ -146,7 +147,6 @@ else:
 	print("You are grown up.")
 
 ### 2.2 while
-
 i = 1								# timer
 while i<=3:
 	print(i*4)						# get (4, 8, 12)
@@ -233,13 +233,11 @@ os.chdir(path)						# cd
 '''
 
 ## 4. Regular expression
-#!/usr/bin/python
 import re							# import re module
 re.match(pattern, string, flag=0)	# match pattern in string(from start)
 re.search(pattern, string, flag=0)	# search pattern in string(in full string)
 re.sub(pattern, repl, string, count=0, flags=0)	# sub 'pattern' with 'repl', total 'count' times
 
-#!/usr/bin/python
 import re
 def double(matched):				# define func 'double()'
     value = int(matched.group('value'))
