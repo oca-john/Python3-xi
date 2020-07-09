@@ -2,7 +2,6 @@
 # map function is used to map each element in an array run in a certain function
 # map函数调用指定函数计算数组中的每个元素的值
 
-
 # method 1, 先定义后调用
 # def a calculating function, 定义一个计算函数
 def sqr(x):
