@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import os
 
 # opensuse库安装python3-pyside2
 os.system("sudo zypper in python3-pyside2")
