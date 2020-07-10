@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# 涉及对象的定义过程，不能交互式执行，需要放入.py代码文件中执行。
 
 # 导入LCD数字，滑块，部件，Box布局，Q程序，网格布局
 from PySide2.QtWidgets import QLCDNumber, QSlider, QWidget, QVBoxLayout, QApplication, QGridLayout
