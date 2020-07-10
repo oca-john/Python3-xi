@@ -9,6 +9,7 @@ Python3 related libs:
             basic-libs: **numpy**, **pandas**, **matplotlib**;  
             advanced: **seaborn**, **scipy**;  
             ai-related: **torch**, **torchvision**;  
+            GUI-dev: **pyside2**;  
 
 ## 关于jupyter_notebook的初始目录
 
