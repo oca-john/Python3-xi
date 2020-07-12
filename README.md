@@ -6,6 +6,7 @@ Pytorch非常流行的一个原因，没有完全将张量的操作API化，让�
 
 Python3 related libs:  
 > syntax-check: **pylint**;  
+> intelligent-syntax-env: **pylance**;  
 > basic-libs: **numpy**, **pandas**, **matplotlib**;  
 > advanced: **seaborn**, **scipy**;  
 > ai-related: **torch**, **torchvision**;  
