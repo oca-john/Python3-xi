@@ -66,3 +66,13 @@ Wx库和Qt库都是基于C++的(后者是KDE的底层)，区别在于前者是�
 >> software.opensuse.org安装Qt  
 >> `sudo zypper in python3-pyside2`  
 >> `sudo pip install pyside2`  
+
+## Qt & Qt-creator
+Qt是KDE的基石，目前采用LGPL协议，是GUI绘制的不错选择。Gtk、Wx等虽都开源，但开发速度和易用性较Qt仍然略差。  
+Qt在Linux下直接从YaST中安装`patterns-libqt5`，在Windows下直接从清华源下载，离线安装不会出现订购页面。  
+Qt的Python开发流程。在Qt-creator中新建项目，选择`Qt for Python - Window`开发桌面应用。  
+
+项目中`.ui`文件用于绘制GUI负责操作逻辑，而`.py`代码文件用于写业务逻辑。  
+写完后的`.ui`文件本质上是`.xml`文件，需要用官方的`pyside2-uic`工具将标记语言转化为Python绘制GUI的代码。  
+之后在业务逻辑`.py`文件中`import`引用该文件即可。
+最终程序直接用`.py`文件执行。
