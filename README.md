@@ -13,9 +13,10 @@ Python3 related libs:
 > GUI-dev: **pyside2**;  
 
 ## VScode中新建Jupyter-notebook文件
-VScode中安装Python扩展（自19年中VScode该扩展已原生支持notebook）。  
-打开VScode后，`Ctrl + Shift + p`，打开命令栏，输入`jupyter`出现`创建空的Jupyter文件`的选项，选择即可创建新的Notebook文件。  
-功能方面和浏览器中的一致，但与浏览器版存在一定的兼容性问题（可能在浏览器中打不开）。  
+1. 安装VScode编辑器，官方方案太慢，推荐下载最新安装包自己手动安装（windows下推荐软件内升级）。  
+2. 安装Python扩展。  
+3. 创建新的Notebook笔记本，`Ctrl + Shift + p`打开命令栏，输入`jupyter`，选择`creat new blank jupyter notebook`创建笔记本。
+
 
 ## 关于jupyter_notebook的初始目录
 
