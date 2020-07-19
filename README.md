@@ -12,6 +12,11 @@ Python3 related libs:
 > ai-related: **torch**, **torchvision**;  
 > GUI-dev: **pyside2**;  
 
+## VScode中新建Jupyter-notebook文件
+VScode中安装Python扩展（自19年中VScode该扩展已原生支持notebook）。  
+打开VScode后，`Ctrl + Shift + p`，打开命令栏，输入`jupyter`出现`创建空的Jupyter文件`的选项，选择即可创建新的Notebook文件。  
+功能方面和浏览器中的一致，但与浏览器版存在一定的兼容性问题（可能在浏览器中打不开）。  
+
 ## 关于jupyter_notebook的初始目录
 
 在windows平台，舒服地在本地使用jupyter_notebook还是比较麻烦的，记录一下使用技巧，方便自己日后使用。
