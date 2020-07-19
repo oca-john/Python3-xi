@@ -1,4 +1,4 @@
-## IRkernel.for.Jupyter.notebook
+## IRkernel.for.jupyter.notebook
 - 为Jupyter配置R内核，在R中操作即可
 
 ### 1. 在R中安装IRkernel内核
