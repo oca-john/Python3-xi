@@ -4,21 +4,20 @@ Python3是目前应用领域最多最流行的脚本语言，有多方面潜力�
 
 Pytorch非常流行的一个原因，没有完全将张量的操作API化，让用户有足够的操作深度和自由度，可以自己掌控开发进度，也可以方便的融入别人的项目。
 
-Python3 related libs:  
-> syntax-check: **pylint**;  
+## 1. Python3 related libs:  
 > intelligent-syntax-env: **pylance**;  
-> basic-libs: **numpy**, **pandas**, **matplotlib**;  
-> advanced: **seaborn**, **scipy**;  
-> ai-related: **torch**, **torchvision**;  
+> basic-libs: **numpy**, **pandas**, **matplotlib**, **seaborn**, **scipy**, **sklearn**; 
+> nn-related: **mne**, **neo**;
+> ai-related: **torch**, **torchvision**, **tensorflow(with tensorboard)**;  
 > GUI-dev: **pyside2**;  
 
-## VScode中新建Jupyter-notebook文件
+## 2. VScode中新建Jupyter-notebook文件
 1. 安装VScode编辑器，官方方案太慢，推荐下载最新安装包自己手动安装（windows下推荐软件内升级）。  
 2. 安装Python扩展。  
 3. 创建新的Notebook笔记本，`Ctrl + Shift + p`打开命令栏，输入`jupyter`，选择`creat new blank jupyter notebook`创建笔记本。
 
 
-## 关于jupyter_notebook的初始目录
+## 3. 关于jupyter_notebook的初始目录
 
 在windows平台，舒服地在本地使用jupyter_notebook还是比较麻烦的，记录一下使用技巧，方便自己日后使用。
 
@@ -33,7 +32,7 @@ Python3 related libs:
 2. 修改`Start in`起始位置属性为`D:\Users\User\Documents`，即为Jupyter默认位置
 3. 打开conda，输入`jupyter-notebook`命令打开notebook浏览器【也可以中间用连字符】
 
-## vscode.code-runner.wsl-linux
+## 4. vscode.code-runner.wsl-linux
 - WSl2中用vscode调用默认终端实现高效开发
 
 ### 软件环境
@@ -57,7 +56,8 @@ F1打开设置搜索框-搜索setting.json （文件-预设-设置-搜索setting
     "code-runner.runInTerminal": true,			# 编辑器代码是否用终端解释
     "code-runner.terminalRoot": "/mnt/",		# 终端解释器的root目录
 ```
-## pyside2
+
+## 5. pyside2
 ### Python最“自由”的三方GUI库
 Pyhton作为最流行的编程语言之一，具有相当多的三方GUI库来辅助其图形开发，除了自身所带的Tk库之外，Wx库、Gtk库、PyQt库是最著名的。  
 
@@ -73,7 +73,7 @@ Wx库和Qt库都是基于C++的(后者是KDE的底层)，区别在于前者是�
 >> `sudo zypper in python3-pyside2`  
 >> `sudo pip install pyside2`  
 
-## Qt & Qt-creator
+## 6. Qt & Qt-creator
 Qt是KDE的基石，目前采用LGPL协议，是GUI绘制的不错选择。Gtk、Wx等虽都开源，但开发速度和易用性较Qt仍然略差。  
 Qt在Linux下直接从YaST中安装`patterns-libqt5`，在Windows下直接从清华源下载，离线安装不会出现订购页面。  
 Qt的Python开发流程。在Qt-creator中新建项目，选择`Qt for Python - Window`开发桌面应用。  
