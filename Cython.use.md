@@ -9,38 +9,40 @@ Cython 是一门单独的语言（以 .pyx 为扩展名），也是 Python 的�
 ## 编译过程注意
 Cython 默认调用 Python2 接口（即参数 -2），如使用 Python3，需要以 'cython -3 name.pyx' 进行编译。
 
-## 使用
-### 1.创建Cython脚本
+## 方法一 使用静态对象编译为so可执行文件
+### 1. 创建 Cython 脚本
 ``` cython
-print "Hello World"
-def hello():
+print "Hello World"             # 交互式输出
+def hello():                    # 函数式输出
     print 'hello in hello.pyx'
 ```
 
-### 2.
+### 2. 创建 setup.py 脚本
 ``` cython
-from distutils.core import setup
-from Cython.Build import cythonize
-setup(
+from distutils.core import setup    # 导入核心工具包中的安装工具
+from Cython.Build import cythonize  # 导入编译工具
+setup(                              # 设置编译参数
     ext_modules = cythonize("hello.pyx")
 )
 ```
 
-### 3.
+### 3. 根据编译参数编译脚本
 ``` cython
 python setup.py build_ext --inplace
 ```
 
-### 3.
+### 4. 调用编译后的 .so 静态库
 ``` cython
 import hello
 hello.hello()
 ```
 
-### 3.
+## 方法二 使用三方库
+### 5. 调用 pyximport 包
 ``` cython
-import pyximport; pyximport.install()
+import pyximport                # 导入关键包
+pyximport.install()             # 安装
 
-import hello
-hello.hello()
+import hello                    # 导入上述自定义的 hello 包
+hello.hello()                   # 输出
 ```
