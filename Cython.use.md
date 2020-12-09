@@ -12,16 +12,16 @@ Cython 默认调用 Python2 接口（即参数 -2），如使用 Python3，需�
 ## 方法一 使用静态对象编译为so可执行文件
 ### 1. 创建 Cython 脚本
 ``` cython
-print "Hello World"             # 交互式输出
-def hello():                    # 函数式输出
+print "Hello World"                     # 交互式输出
+def hello():                            # 函数式输出
     print 'hello in hello.pyx'
 ```
 
 ### 2. 创建 setup.py 脚本
 ``` cython
-from distutils.core import setup    # 导入核心工具包中的安装工具
-from Cython.Build import cythonize  # 导入编译工具
-setup(                              # 设置编译参数
+from distutils.core import setup        # 导入核心工具包中的安装工具
+from Cython.Build import cythonize      # 导入编译工具
+setup(                                  # 设置编译参数
     ext_modules = cythonize("hello.pyx")
 )
 ```
@@ -39,10 +39,10 @@ hello.hello()
 
 ## 方法二 使用三方库
 ### 5. 调用 pyximport 包
+如果代码中没有特别需要调用的 C 库，可以使用 pyximport 包测试性编译 Python 代码
 ``` cython
-import pyximport                # 导入关键包
-pyximport.install()             # 安装
+import pyximport; pyximport.install()   # 导入关键包
 
-import hello                    # 导入上述自定义的 hello 包
-hello.hello()                   # 输出
+import hello                            # 导入上述自定义的 hello 包
+hello.hello()                           # 输出
 ```
