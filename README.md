@@ -70,7 +70,7 @@ tensorflow (版本号与 python 版本相关)使用本体安装，若由 tensorb
 开始前用 `conda info -e` 查看当前所有环境列表，默认只有 base 环境。虚拟环境创建 `conda create -n tf1 python=3.6` 创建新的指定python版本的虚拟环境。  
 `conda activate tf1` 进入该环境；在环境内 `conda deactivate` 则退出至 base 环境。  
 在开始菜单中找到 miniconda3 的图标，找到快捷方式位置，属性中可设置两个参数。  
-> target 中通过修改默认 conda 指向的文件夹位置，指定 `tf1` 环境所在的文件夹，即可在进入 conda 后默认进入该虚拟环境，而非 base
+> target 中通过修改默认 conda 指向的文件夹位置，指定 `tf1` 环境所在的文件夹，即可在进入 conda 后默认进入该虚拟环境，而非 base。  
 > 修改默认打开的地址，到自己常用的文件夹，如 Documents 文件夹或个人代码目录。
 
 
