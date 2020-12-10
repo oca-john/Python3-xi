@@ -66,6 +66,14 @@ pip 安装尽量使用本地清华源：`-i https://pypi.tuna.tsinghua.edu.cn/si
 
 tensorflow (版本号与 python 版本相关)使用本体安装，若由 tensorboard 安装时附带，容易导致 tb 版本比 tf 高的情况，出现报错。用 pip list 或 conda list 查看版本号，再用指定版本的方式 install 一遍以检查依赖关系。【此处需要补充检查命令】
 
+## 5.2 Conda 命令行环境配置
+开始前用 `conda info -e` 查看当前所有环境列表，默认只有 base 环境。虚拟环境创建 `conda create -n tf1 python=3.6` 创建新的指定python版本的虚拟环境。  
+`conda activate tf1` 进入该环境；在环境内 `conda deactivate` 则退出至 base 环境。  
+在开始菜单中找到 miniconda3 的图标，找到快捷方式位置，属性中可设置两个参数。  
+> target 中通过修改默认 conda 指向的文件夹位置，指定 `tf1` 环境所在的文件夹，即可在进入 conda 后默认进入该虚拟环境，而非 base
+> 修改默认打开的地址，到自己常用的文件夹，如 Documents 文件夹或个人代码目录。
+
+
 ## 6. pyside2
 ### Python 最“自由”的三方GUI库
 Pyhton 作为最流行的编程语言之一，具有相当多的三方 GUI 库来辅助其图形开发，除了自身所带的 Tk 库之外，Wx 库、Gtk 库、PyQt 库是最著名的。  
