@@ -1,5 +1,5 @@
-# 快速检查常用三方库
-
+# 快速检查 Python 常用的三方库
+``` sh
 #!/usr/bin/sh
 python -c "import numpy;print('numpy:', numpy.__version__, '\n');
 import scipy;print('scipy:', scipy.__version__, '\n');
@@ -12,3 +12,4 @@ import neo;print('neo:', neo.__version__, '\n');
 import torch;print('torch:', torch.__version__, '\n');
 import tensorflow;print('tensorflow:', tensorflow.__version__, '\n');
 import mindspore;print('mindspore:', mindspore.__version__, '\n')"
+```
