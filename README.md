@@ -87,7 +87,8 @@ pip 安装尽量使用本地清华源：`-i https://pypi.tuna.tsinghua.edu.cn/si
 tensorflow (版本号与 python 版本相关)使用本体安装，若由 tensorboard 安装时附带，容易导致 tb 版本比 tf 高的情况，出现报错。用 pip list 或 conda list 查看版本号，再用指定版本的方式 install 一遍以检查依赖关系。【此处需要补充检查命令】
 
 ## 5.2 Conda 命令行环境配置
-开始前用 `conda info -e` 查看当前所有环境列表，默认只有 base 环境。虚拟环境创建 `conda create -n tf1 python=3.6` 创建新的指定python版本的虚拟环境。  
+开始前用 `conda info -e` 查看当前所有环境列表，默认只有 base 环境。虚拟环境创建 `conda create -n tf1 python=3.7.5` 创建新的指定python版本的虚拟环境。  
+若新环境创建失败，考虑是否是在线仓库连接失败导致的？通过修改软件源到国内的清华源提高连接质量，重新创建。  
 `conda activate tf1` 进入该环境；在环境内 `conda deactivate` 则退出至 base 环境。  
 在开始菜单中找到 miniconda3 的图标，找到快捷方式位置，属性中可设置两个参数。  
 > target 中通过修改默认 conda 指向的文件夹位置，指定 `tf1` 环境所在的文件夹，即可在进入 conda 后默认进入该虚拟环境，而非 base。  
@@ -109,6 +110,8 @@ Wx 库和 Qt 库都是基于 C++ 的(后者是 KDE 的底层)，区别在于前�
 >> software.opensuse.org 安装 Qt  
 >> `sudo zypper in python3-pyside2`  
 >> `sudo pip install pyside2`  
+
+写界面的时候才会用到 pyside2，但界面使用 Qt-Designer 生成效率会更高也更直观。  
 
 ## 7. Qt & Qt-creator
 Qt是KDE的基石，目前采用LGPL协议，是GUI绘制的不错选择。Gtk、Wx等虽都开源，但开发速度和易用性较Qt仍然略差。  
