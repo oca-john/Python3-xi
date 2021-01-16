@@ -93,32 +93,3 @@ tensorflow (版本号与 python 版本相关)使用本体安装，若由 tensorb
 在开始菜单中找到 miniconda3 的图标，找到快捷方式位置，属性中可设置两个参数。  
 > target 中通过修改默认 conda 指向的文件夹位置，指定 `tf1` 环境所在的文件夹，即可在进入 conda 后默认进入该虚拟环境，而非 base。  
 > 修改默认打开的地址，到自己常用的文件夹，如 Documents 文件夹或个人代码目录。
-
-
-## 6. pyside2
-### Python 最“自由”的三方GUI库
-Pyhton 作为最流行的编程语言之一，具有相当多的三方 GUI 库来辅助其图形开发，除了自身所带的 Tk 库之外，Wx 库、Gtk 库、PyQt 库是最著名的。  
-
-Tk 库灵活性和功能性相对于三方库相去甚远，Gtk 是 Gnome 背后的底层库，基于 C 语言，其 Python 绑定据说较复杂，主要是 C 语言三方库的缺少导致一些功能的实现较困难。  
-
-Wx 库和 Qt 库都是基于 C++ 的(后者是 KDE 的底层)，区别在于前者是纯社区驱动的，API、开发文档不甚完善；后者经历过商业、半商业（LGPL）的演变，API 和文档非常完善，开发实例也多。两者对商业软件的开发都比较友好，允许开发私有应用而不必公开源码，只需要标注引用了那些 LGPL 标准库，若没有采用官方的标准库，则连引用都不需要。  
-
-在 Qt 被诺基亚收购后，诺基亚尝试让 PyQt 更自由，希望其所有公司使用 LGPL 发布其源码，但被拒绝，于是有了开源世界与之对等的 Qt for Python 项目，也就是后来的 PySide 和 PySide2 库。PySide2 库采用了 LGPL 协议，天生对商业用户友好，加之与 PyQt 的兼容性超高，因此是 Python GUI 开发的最佳方案。  
-
-> 环境配置
->> 优先考虑 openSUSE 上开发，可避免 windows 上 Qt 只能用商业版本的问题，若纯命令开发则不存在该问题。  
->> software.opensuse.org 安装 Qt  
->> `sudo zypper in python3-pyside2`  
->> `sudo pip install pyside2`  
-
-写界面的时候才会用到 pyside2，但界面使用 Qt-Designer 生成效率会更高也更直观。  
-
-## 7. Qt & Qt-creator
-Qt是KDE的基石，目前采用LGPL协议，是GUI绘制的不错选择。Gtk、Wx等虽都开源，但开发速度和易用性较Qt仍然略差。  
-Qt在Linux下直接从YaST中安装`patterns-libqt5`，在Windows下直接从清华源下载，离线安装不会出现订购页面。  
-Qt的Python开发流程。在Qt-creator中新建项目，选择`Qt for Python - Window`开发桌面应用。  
-
-项目中`.ui`文件用于绘制GUI负责操作逻辑，而`.py`代码文件用于写业务逻辑。  
-写完后的`.ui`文件本质上是`.xml`文件，需要用官方的`pyside2-uic`工具将标记语言转化为Python绘制GUI的代码。  
-之后在业务逻辑`.py`文件中`import`引用该文件即可。
-最终程序直接用`.py`文件执行。
