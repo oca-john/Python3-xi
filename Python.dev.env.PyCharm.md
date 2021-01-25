@@ -13,3 +13,15 @@ PyCharm是商业公司的Python集成开发工具，有专业版、社区版和�
 - 作为普通用户，直接选社区版即可。
 
 - 社区版地址：https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC
+
+## Pychram本身集成了方便的开发环境管理；
+- 插件系统包含了协同开发工具code with me， 以及与其他语言混合开发的支持；
+- 支持语法纠错，变量查找，调用查找，错误定位；
+- 目前用到的所有功能都能在VScode中通过插件扩展实现。
+
+## 考虑到IDE体积问题，选择迁移到VScode环境开发
+- Pycharm, 1170 M
+- Kdevelop,700 M
+- VScode,  240 M
+- VIM,     26  M
+- Spyder,  仅用于数据相关开发，暂不考虑
