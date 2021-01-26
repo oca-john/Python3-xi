@@ -51,30 +51,31 @@ Pytorch 非常流行的一个原因，没有完全将张量的操作 API 化，�
 F1 打开设置搜索框-搜索 setting.json （文件-预设-设置-搜索 setting.json-edit.in.setting.json）。  
 
 #### setting-json 编辑
-``` json
-    // VScode 设置
-    "workbench.iconTheme": "vscode-icons",    
-    "update.mode": "manual",
-    "workbench.activityBar.visible": true,
-
-
-    // Code-runner 设置
-    "code-runner.defaultLanguage": "python"             // 默认 code-runner 编程语言为 Python
-    "code-runner.runInTerminal": true,                  // 调用终端运行 code-runner 命令
-    // "code-runner.terminalRoot": "/mnt/",             // 终端的默认起始位置
+``` js
+// 实际应为json，由于json不支持注释，此处用js语法渲染。
+{
+    "workbench.iconTheme": "vscode-icons",            // 图标主题
+    "update.mode": "manual",                          // 手动更新
+    "terminal.integrated.inheritEnv": false,
+    "explorer.confirmDelete": false,
+    "kite.showWelcomeNotificationOnStartup": false,   // 不显示 Kite 弹窗
+    "vsicons.dontShowNewVersionMessage": true,        // 图标插件不检查更新
+    "workbench.activityBar.visible": false,           // 侧边栏隐藏
+    "python.pythonPath": "/home/oca/bin/miniconda3/envs/mindspore/bin/python"   // Python 解释器路径
+    "code-runner.executorMap": {                      // Code Runner 相关解释器或调试器路径
+        "perl": "perl",
+        "html": "google-chrome",                      // 其他语言支持参见 Code Runner 插件详情页示例代码
+    }
     
-
-    // 设置 wsl 解释器
-    // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",   // when use wsl as terminal
-    // "python.pythonPath": "D:\\Programs\\Miniconda3\\envs\\tf1\\python.exe",  // tf1 环境中的解释器
-
-
-    // 设置为 Conda env 中的解释器
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
-    "python.pythonPath": "D:\\ProgramData\\Anaconda3\\envs\\fortrain\\python.exe",
-    "terminal.integrated.shellArgs.windows": ["/K",
-    "D:\\Programs\\miniconda3\\Scripts\\activate.bat D:\\Programs\\miniconda3\\envs\\tf1"]
-
+    // Windows WSL/Conda 平台需要特别配置的
+    "code-runner.defaultLanguage": "python"           // 默认 Code Runner 编程语言为 Python
+    "code-runner.runInTerminal": true,                // 调用终端运行 Code Runner 命令
+    // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",   // 以 WSL 为解释器
+    // "python.pythonPath": "D:\\Programs\\Miniconda3\\envs\\tf1\\python.exe",  // tf1 环境中 Python 解释器路径
+    // "code-runner.terminalRoot": "/mnt/d/Users/oca/",                         // 终端的默认起始位置
+    // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",   // 以 cmd 为交互 shell 终端
+    // "terminal.integrated.shellArgs.windows": ["/K", "D:\\Programs\\miniconda3\\Scripts\\activate.bat D:\\Programs\\miniconda3\\envs\\tf1"]   // 配合上一行设置终端中的 Conda 虚拟环境 Python 解释器
+}
 ```
 
 ## 5. Miniconda 配置
