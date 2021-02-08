@@ -20,8 +20,8 @@ PyCharm是商业公司的Python集成开发工具，有专业版、社区版和�
 - 目前用到的所有功能都能在VScode中通过插件扩展实现。
 
 ## 考虑到IDE体积问题，选择迁移到VScode环境开发
-- Pycharm, 1170 M
-- Kdevelop,700 M
-- VScode,  240 M
-- VIM,     26  M
-- Spyder,  仅用于数据相关开发，暂不考虑
+- Pycharm, 1170 M   纯Python开发，可用 V
+- Kdevelop,700 M    仅适用于C/C++相关开发
+- VScode,  240 M    扩展性最强，体积不大，可用 V
+- VIM,     26  M    有补全情况下写代码可用，调试较差
+- Spyder,           仅用于数据相关开发
