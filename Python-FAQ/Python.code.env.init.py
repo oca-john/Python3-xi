@@ -15,7 +15,7 @@ os.system("sudo zypper in python3-numpy python3-scipy python3-matplotlib python3
 print("3rd part lib were configured well.")
 
 # 3. 深度学习库
-os.system("sudo pip install torch==1.5.1+cpu torchvision==0.6.1+cpu -i https://pypi.tuna.tsinghua.edu.cn/simple")
+os.system("sudo pip install torch==1.5.1+cpu torchvision==0.6.1+cpu -i https://mirrors.ustc.edu.cn/pypi/web/simple")
 print("deeplearning lib pytorch was installed well.")
 
 # 4. 代码语法格式检查
