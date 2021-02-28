@@ -29,7 +29,7 @@ Pytorch 非常流行的一个原因，没有完全将张量的操作 API 化，�
 
 ### b. 将用户 Documents 文件夹设为默认目录
 1. 打开 conda 所在文件夹，调出 conda 快捷图标的属性（非cmd属性）
-2. 修改`Start in`起始位置属性为`D:\Users\User\Documents`，即为 Jupyte r默认位置
+2. 修改`Start in`起始位置属性为`D:\Users\User\Documents`，即为 Jupyter 默认位置
 3. 打开 conda，输入`jupyter-notebook`命令打开 notebook 浏览器【也可以中间用连字符】
 
 ## 4. vscode.code-runner.wsl-linux
