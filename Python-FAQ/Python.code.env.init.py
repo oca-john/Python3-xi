@@ -19,7 +19,7 @@ os.system("sudo pip install torch==1.5.1+cpu torchvision==0.6.1+cpu -i https://m
 print("deeplearning lib pytorch was installed well.")
 
 # 4. 神经科学库
-os.system("sudo pip install mne-bids nibabel pybv -i https://mirrors.ustc.edu.cn/pypi/web/simple")
+os.system("sudo pip install neo mne mne-bids nibabel pybv -i https://mirrors.ustc.edu.cn/pypi/web/simple")
 print("nero lib was installed.")
 
 # 5. 代码语法格式检查
