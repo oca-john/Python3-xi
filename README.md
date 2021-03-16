@@ -7,8 +7,8 @@ Pytorch 非常流行的一个原因，没有完全将张量的操作 API 化，�
 ## 1. Python3 related libs:  
 > intelligent-syntax-env: **pylance**;  
 > basic-libs: **numpy**, **pandas**, **matplotlib**, **seaborn**, **scipy**, **sklearn**;  
-> nn-related: **mne**, **neo**; 
-> 补充几个社区推荐的包，`sudo pip install mne-bids nibabel pybv -i https://mirrors.ustc.edu.cn/pypi/web/simple` 
+> nn-related: **mne**, **neo**;   
+> 补充几个社区推荐的包，`sudo pip install mne-bids nibabel pybv -i https://mirrors.ustc.edu.cn/pypi/web/simple`   
 > ai-related: **torch**, **torchvision**, **tensorflow(with tensorboard)**;  
 > GUI-dev: **pyside2**;  
 
