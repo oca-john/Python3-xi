@@ -18,5 +18,9 @@ print("3rd part lib were configured well.")
 os.system("sudo pip install torch==1.5.1+cpu torchvision==0.6.1+cpu -i https://mirrors.ustc.edu.cn/pypi/web/simple")
 print("deeplearning lib pytorch was installed well.")
 
-# 4. 代码语法格式检查
+# 4. 神经科学库
+os.system("sudo pip install mne-bids nibabel pybv -i https://mirrors.ustc.edu.cn/pypi/web/simple")
+print("nero lib was installed.")
+
+# 5. 代码语法格式检查
 os.system("sudo pip install pylint")
