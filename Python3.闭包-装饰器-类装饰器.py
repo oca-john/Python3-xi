@@ -53,7 +53,7 @@ class logging(object):
     def __init__(self, func):				# 初始化方法，接收了函数作为参数
         self.func = func
         									# 使用类方法中的 call 方法来直接调用装饰器
-    def __call__(self, *args, **kwargs):	
+    def __call__(self, *args, **kwargs):	# 接收函数和参数，作为参数列表
         print("[DEBUG]: enter {}()".format(self.func.__name__))
         return self.func(*args, **kwargs)	# 返回所有参数作为输出
 
@@ -72,8 +72,8 @@ class logging(object):
     def __init__(self, level):			# 初始化方法，接收了外部参数
         self.level = level
 
-    def __call__(self, func):
-        def wrapper(*args, **kwargs):
+    def __call__(self, func):			# 接收参数和函数，作为参数列表
+        def wrapper(*args, **kwargs):	# 内部函数再接收参数列表
             print("[{0}]: enter {1}()".format(self.level, func.__name__))
             return func(*args, **kwargs)# 返回所有参数作为输出
         return wrapper
