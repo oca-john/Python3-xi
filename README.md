@@ -91,17 +91,23 @@ F1 打开设置搜索框-搜索 setting.json （文件-预设-设置-搜索 sett
 
 ## 5. Miniconda 配置
 用 pip 或 conda 安装所有三方库即可。  
+
 尽量避免混合使用 pip 和 conda 命令，虽然二者在 conda 内部共享软件列表。  
 
 pip 安装尽量使用本地科大源`-i https://mirrors.ustc.edu.cn/pypi/web/simple`或清华源：`-i https://pypi.tuna.tsinghua.edu.cn/simple`  
+
 tensorflow (版本号与 python 版本相关)使用本体安装，若由 tensorboard 安装时附带，容易导致 tb 版本比 tf 高的情况，出现报错。用 pip list 或 conda list 查看版本号，再用指定版本的方式 install 一遍以检查依赖关系。【此处需要补充检查命令】
 
 也可使用`sudo pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple`命令修改软件源。
 
 ## 5.2 Conda 命令行环境配置
 开始前用 `conda info -e` 查看当前所有环境列表，默认只有 base 环境。虚拟环境创建 `conda create -n tf1 python=3.7.5` 创建新的指定python版本的虚拟环境。  
+
 若新环境创建失败，考虑是否是在线仓库连接失败导致的？通过修改软件源到国内的清华源提高连接质量，重新创建。  
+
 `conda activate tf1` 进入该环境；在环境内 `conda deactivate` 则退出至 base 环境。  
+
 在开始菜单中找到 miniconda3 的图标，找到快捷方式位置，属性中可设置两个参数。  
+
 > target 中通过修改默认 conda 指向的文件夹位置，指定 `tf1` 环境所在的文件夹，即可在进入 conda 后默认进入该虚拟环境，而非 base。  
 > 修改默认打开的地址，到自己常用的文件夹，如 Documents 文件夹或个人代码目录。
