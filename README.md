@@ -92,8 +92,11 @@ F1 打开设置搜索框-搜索 setting.json （文件-预设-设置-搜索 sett
 ## 5. Miniconda 配置
 用 pip 或 conda 安装所有三方库即可。  
 尽量避免混合使用 pip 和 conda 命令，虽然二者在 conda 内部共享软件列表。  
+
 pip 安装尽量使用本地科大源`-i https://mirrors.ustc.edu.cn/pypi/web/simple`或清华源：`-i https://pypi.tuna.tsinghua.edu.cn/simple`  
 tensorflow (版本号与 python 版本相关)使用本体安装，若由 tensorboard 安装时附带，容易导致 tb 版本比 tf 高的情况，出现报错。用 pip list 或 conda list 查看版本号，再用指定版本的方式 install 一遍以检查依赖关系。【此处需要补充检查命令】
+
+也可使用`sudo pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple`命令修改软件源。
 
 ## 5.2 Conda 命令行环境配置
 开始前用 `conda info -e` 查看当前所有环境列表，默认只有 base 环境。虚拟环境创建 `conda create -n tf1 python=3.7.5` 创建新的指定python版本的虚拟环境。  
