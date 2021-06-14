@@ -12,6 +12,8 @@ nn-related:  **mne** , neo;
 ## 补充几个社区推荐的包: 
 `sudo pip install mne-bids nibabel pybv -i https://mirrors.ustc.edu.cn/pypi/web/simple`
 
+也可使用`sudo pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple`命令修改软件源。
+
 ## 深度学习相关：
 ai-related:  **tensorflow** (with tensorboard), torch, torchvision;
 
