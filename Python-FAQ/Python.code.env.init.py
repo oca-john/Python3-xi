@@ -3,7 +3,7 @@
 # 用python实现python的开发环境的初始化配置
 # 主要包括默认python和pip版本配置，相关三方库的安装，深度学习相关库的安装
 
-# 可以使用`sudo pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple`命令修改软件源。
+# 可以使用`sudo pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple`命令修改软件源。
 
 # 导入相关库
 import os
