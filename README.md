@@ -113,4 +113,4 @@ tensorflow (版本号与 python 版本相关)使用本体安装，若由 tensorb
 > 修改默认打开的地址，到自己常用的文件夹，如 Documents 文件夹或个人代码目录。
 
 ### 若使用 Kdevelop 作为开发环境
-使用 Kdevelop 作为 Python 开发环境，需要在系统环境中为其安装 Python 扩展`kdevelop-python`（不是在Kdev内部安装的），重启软件后，可以实现类似 C/C++ 的开发支持。
+使用 Kdevelop 作为 Python 开发环境，需要在系统环境中为其安装 Python 扩展`kdevelop-python`（不是在Kdev内部安装的，故不支持Win平台），重启软件后，可以实现类似 C/C++ 的开发支持。
