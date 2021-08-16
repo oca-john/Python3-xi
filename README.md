@@ -12,6 +12,10 @@ Pytorch 非常流行的一个原因，没有完全将张量的操作 API 化，�
 > ai-related: **torch**, **torchvision**, **tensorflow(with tensorboard)**;  
 > GUI-dev: **pyside2**;  
 
+-  pip 使用 `-r` 参数批量安装预配置好的三方库列表  
+`pip install -r requirements.txt`, 其中 requirements.txt 文件中预先写好需要安装的库名（每行一个库）
+
+
 ## 2. VScode 中新建 Jupyter-notebook 文件
 1. 安装 VScode 编辑器，官方方案太慢，推荐下载最新安装包自己手动安装（windows 下推荐软件内升级）。  
 2. 安装 Python 扩展。  
