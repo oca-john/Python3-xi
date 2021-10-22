@@ -120,5 +120,13 @@ tensorflow (版本号与 python 版本相关)使用本体安装，若由 tensorb
 > target 中通过修改默认 conda 指向的文件夹位置，指定 `tf1` 环境所在的文件夹，即可在进入 conda 后默认进入该虚拟环境，而非 base。  
 > 修改默认打开的地址，到自己常用的文件夹，如 Documents 文件夹或个人代码目录。
 
+- 下述Target命令需要整合在一行复制到快捷方式属性“目标地址”栏中：
+
+```
+D:\Programs\miniconda3\python.exe D:\Programs\miniconda3\cwp.py D:\Programs\miniconda3\envs\mindspore 
+D:\Programs\miniconda3\envs\mindspore\Scripts\jupyter-notebook.exe D:\Users\oca\Desktop\WorkingDir\Codes-spaces
+# python.exe是程序，cwp.py mindspore切换工作环境，jupyter-notebook是目标程序，Codes-spaces是打开的工作目录
+```
+
 ### 若使用 Kdevelop 作为开发环境
 使用 Kdevelop 作为 Python 开发环境，需要在系统环境中为其安装 Python 扩展`kdevelop-python`（不是在Kdev内部安装的，故不支持Win平台），重启软件后，可以实现类似 C/C++ 的开发支持。
